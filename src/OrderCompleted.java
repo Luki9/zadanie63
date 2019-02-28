@@ -1,8 +1,11 @@
-import java.util.Comparator;
+import java.util.List;
 
-class OrderCompleted implements Comparator {
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
+class OrderCompleted  {
+
+
+    static  void addToOrders(List<Order> orders, OrderStatus){
+        orders.add(new Order(orders.size() + 1, orders.toString(),orders.get(),))
     }
-}
+
+    }
+
