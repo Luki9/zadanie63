@@ -1,10 +1,10 @@
 public enum OrderStatus {
 
-    ORDERED("Zamówione"),
-    PREPARED_FOR_SHIPPING("Przygotowanie do wysyłki"),
-    ON_THE_WAY ("W TRANSPORCIE"),
-    COMPLETED("Zrealizowane");
-    Cancelled("Anulowane");
+    ORDER(2,"Zamówione"),
+    PREPARED_FOR_SHIPPING(2,"Przygotowanie do wysyłki"),
+    ON_THE_WAY (3,"W TRANSPORCIE"),
+    COMPLETED(3,"Zrealizowane"),
+    Canceled(4,"Anulowane");
 
     int id;
     String orderStatus;
