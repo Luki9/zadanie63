@@ -1,8 +1,11 @@
 import java.util.Comparator;
 
-class OrderStatusComparator implements Comparator {
+class OrderStatusComparator implements Comparator<Order> {
+
+
     @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
+    public int compare(Order o1, Order o2) {
+
+        return Double.compare(o1.getOrderStatus().getId(),o2.getOrderStatus().getId());
     }
 }
