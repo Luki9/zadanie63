@@ -7,10 +7,10 @@ class Main {
 
     public static void main(String[] args) {
 
-        List<Order>orders = new ArrayList<>();
+        List<Order>order = new ArrayList<>();
 
         try {
-            orders = (List<Order>) new FileReader("orders.csv");
+            order =  new FileReader("orders.csv");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

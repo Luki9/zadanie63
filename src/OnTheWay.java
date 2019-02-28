@@ -1,25 +1,25 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class OnTheWay {
-
+public class OnTheWay {
+    String orders = new String();
 
     File file = new File("orders.csv");
-    Scanner scanner;
+    Scanner scanner = new Scanner(file);
+    String getOrders;
 
-    {
-        try {
-            scanner = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+
+    public OnTheWay() throws FileNotFoundException {
+
+
+        while (scanner.hasNextLine()){
+            orders = scanner.nextLine();
+
+
         }
     }
-
-
-
-
-
-
 }
