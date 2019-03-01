@@ -1,11 +1,15 @@
 import java.util.List;
 
-class OrderCompleted  {
+class OrderCompleted {
 
-
-    static  void addToOrders(List<Order> orders, OrderStatus){
-        orders.add(new Order(orders.size() + 1, orders.toString(),orders.get(),))
-    }
+    static void getOrderStatus(List<Order> orders, Order order) {
+        orders.add(new Order(orders.size() + 1, order.getName(), order.getPrice(), order.getOrderStatus()));
 
     }
+    static void changeOrderStatus(int id, List<Order> orders){
+        if (!checkID(id, orders))
+            System.out.println();
 
+
+    }
+}
