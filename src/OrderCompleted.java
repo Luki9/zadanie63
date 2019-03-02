@@ -29,15 +29,31 @@ class OrderCompleted {
                         case Canceled:
                             System.out.println("Zamówienie zostało anulowane");
                             break;
-
                     }
                 }
 
             }
-
         }
-        static void sortByName(List<Order> orders){
-            Collections.sort(Order,new PriceComparator());
+        static boolean cancelOrder(int id List<Order> orders){
+            if (!changeOrderStatus(id, orders))
+                System.out.println("Stan zamówiena" + id + ":");
+            else{
+                for (int i = 0; i < orders.size(); i++) {
+                    if (orders.get(i).getId() == id){
+                        if(orders.get(i).getOrderStatus() == OrderStatus.ORDER || orders.get(i).getOrderStatus() == OrderStatus.PREPARED_FOR_SHIPPING){
+                            orders.get(i).setOrderStatus(OrderStatus.Canceled);
+                            System.out.println("Stan zamówienia " + (i + 1) + "Anulowane");
+
+                        }else if(orders.get(i).getOrderStatus() != OrderStatus.PREPARED_FOR_SHIPPING && orders.get(i).getOrderStatus() == OrderStatus.PREPARED_FOR_SHIPPING){
+                            System.out.println("Stan zamówienia" + (i + 1 ) + "Koniec usługi");
+
+                        }
+
+                    }
+
+                }
+            }
+
         }
 
 
